@@ -1,0 +1,47 @@
+{
+  "name": "christmas-shop",
+  "version": "1.0.0",
+  "description": "The website 'Christmas Shop' is dedicated to the Christmas theme and showcases skills in responsive design, as well as the use of native JavaScript for adding interactivity.",
+  "homepage": "https://github.com/cherkasovaa/christmas-shop#readme",
+  "bugs": {
+    "url": "https://github.com/cherkasovaa/christmas-shop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherkasovaa/christmas-shop.git"
+  },
+  "license": "ISC",
+  "author": "Alina Cherkasova",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "stylelint": "stylelint '**/*.{css,scss}'",
+    "stylelint:fix": "stylelint '**/*.{css,scss}' --fix",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.89.2",
+    "stylelint": "^16.20.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "vite": "^6.3.5"
+  }
+}

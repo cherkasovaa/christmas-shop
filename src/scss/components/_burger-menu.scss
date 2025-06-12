@@ -1,0 +1,39 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.burger-menu {
+  --size: 40px;
+
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+
+  &__item {
+    position: relative;
+    width: 20px;
+    height: 1px;
+    background: variables.$dark-c;
+    transition: variables.$transition;
+  }
+
+  &.active &__item:first-child {
+    transform: rotate(45deg);
+    transform-origin: 30%;
+  }
+
+  &.active &__item:last-child {
+    transform: rotate(-45deg);
+    transform-origin: 8%;
+  }
+}
+
+@include mixins.respond-to('tablet') {
+  .burger-menu {
+    display: flex;
+  }
+}

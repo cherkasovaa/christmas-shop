@@ -1,0 +1,34 @@
+@use '../helpers/variables';
+
+.control {
+  --size: 54px;
+
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  padding: 16px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid variables.$white-c;
+  border-radius: variables.$border-radius-l;
+  stroke: variables.$white-c;
+  transition: variables.$transition;
+
+  &:not(.inactive):hover {
+    background: variables.$white-c;
+    stroke: variables.$primary-c;
+  }
+
+  &.inactive {
+    cursor: default;
+    border: 1px solid variables.$white-20-c;
+    stroke: variables.$white-20-c;
+  }
+
+  & .icon {
+    --size: 24px;
+
+    width: var(--size);
+    height: var(--size);
+  }
+}

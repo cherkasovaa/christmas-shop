@@ -1,0 +1,34 @@
+@use '../helpers/variables';
+
+.hero {
+  color: variables.$white-c;
+  background:
+    no-repeat center center / cover url('../assets/images/bg-snow.png'),
+    no-repeat center center / cover url('../assets/images/bg-ball.png');
+  border-radius: variables.$border-radius-l variables.$border-radius-l 0 0;
+
+  &_gift {
+    &.section {
+      padding: 0 1px;
+    }
+
+    overflow: hidden;
+    background: variables.$primary-c url('../assets/images/bg-garland.png')
+      no-repeat top center / contain;
+    border-radius: variables.$border-radius-l;
+  }
+
+  &_gift &__container.container {
+    gap: 20px;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 60px 0;
+  }
+}

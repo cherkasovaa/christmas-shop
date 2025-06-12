@@ -1,0 +1,41 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.slider {
+  &__inner {
+    display: flex;
+    gap: 20px;
+    transform: translateX(0);
+    transition: variables.$transition;
+  }
+
+  &__slide {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__slide-image-wrapper {
+    --size: 200px;
+
+    width: var(--size);
+    height: var(--size);
+    overflow: hidden;
+    border-radius: variables.$border-radius-l;
+  }
+
+  &__slide-text {
+    @include mixins.header-slider;
+  }
+
+  &__slide-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__controls {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+  }
+}

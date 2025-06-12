@@ -1,0 +1,18 @@
+@use '../helpers/variables';
+
+.carousel {
+  overflow: hidden;
+  background: url('../assets/images/bg-snow.png') no-repeat center center /
+    cover;
+
+  &.section {
+    padding: 60px 8px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: variables.$white-c;
+  }
+}

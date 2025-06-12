@@ -1,0 +1,68 @@
+@use 'sass:map';
+@use 'variables';
+
+@mixin heading(
+  $line-height: 152%,
+  $letter-spacing: 4px,
+  $font-weight: 600,
+  $text-transform: uppercase
+) {
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-transform: $text-transform;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin action-small($spacing: 0.5px) {
+  @include heading($line-height: 130%, $letter-spacing: $spacing);
+
+  font-size: variables.$font-size-s;
+}
+
+@mixin header-slider() {
+  @include heading($line-height: 0, $letter-spacing: 0);
+
+  font-size: variables.$font-size-xxl;
+}
+
+@mixin header-main() {
+  @include heading($line-height: 150%, $letter-spacing: 6px);
+
+  font-size: variables.$font-size-xl;
+}
+
+@mixin header-secondary() {
+  @include heading;
+
+  font-size: variables.$font-size-l;
+}
+
+@mixin header-tertiary() {
+  @include heading($letter-spacing: 1.4px);
+
+  font-size: variables.$font-size-m;
+}
+
+@mixin header-quaternary() {
+  @include heading($letter-spacing: 1px);
+
+  font-size: variables.$font-size-s;
+}
+
+@mixin caption() {
+  @include heading(
+    $line-height: 100%,
+    $letter-spacing: 1.2px,
+    $font-weight: 400,
+    $text-transform: none
+  );
+
+  font-family: variables.$secondary-font;
+  font-size: variables.$font-size-l;
+}
+
+@mixin respond-to($breakpoint) {
+  @media screen and (max-width: map.get(variables.$breakpoints, $breakpoint)) {
+    @content;
+  }
+}

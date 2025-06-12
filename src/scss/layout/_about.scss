@@ -1,0 +1,73 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.about {
+  background: url('../assets/images/bg-snow.png') no-repeat center center /
+    cover;
+
+  &.section {
+    padding: 60px 8px;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: variables.$white-c;
+    border-radius: variables.$border-radius-l;
+  }
+
+  &__content {
+    display: flex;
+    flex-basis: 480px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 60px;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: variables.$border-radius-l;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@include mixins.respond-to('tablet') {
+  .about {
+    &__content {
+      flex-basis: 469px;
+      padding: 60px;
+    }
+
+    &__image-wrapper {
+      flex-basis: 68%;
+    }
+  }
+}
+
+@include mixins.respond-to('tablet-s') {
+  .about {
+    &__content {
+      flex-basis: 100%;
+      padding: 60px 20px;
+    }
+
+    &__content-wrapper {
+      flex-direction: column;
+    }
+
+    &__image-wrapper {
+      flex-basis: 100%;
+    }
+  }
+}

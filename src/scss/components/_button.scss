@@ -1,0 +1,24 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.button {
+  color: variables.$white-c;
+  text-decoration: none;
+  cursor: pointer;
+  transition: variables.$transition;
+
+  &_primary {
+    @include mixins.action-small;
+
+    padding: 20px 32px;
+    outline: none;
+    background: variables.$dark-c;
+    border: none;
+    border-radius: variables.$border-radius-l;
+
+    &:hover {
+      color: variables.$dark-c;
+      background: variables.$white-c;
+    }
+  }
+}

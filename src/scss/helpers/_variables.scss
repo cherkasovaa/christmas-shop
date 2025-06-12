@@ -1,0 +1,50 @@
+@use 'sass:map';
+
+// Typography
+
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Allura', cursive;
+
+// Font Sizes
+$font-size-xxl: 80px;
+$font-size-xl: 32px;
+$font-size-l: 24px;
+$font-size-m: 16px;
+$font-size-s: 12px;
+
+// Colors
+$primary-c: #ff4646;
+$primary-10-c: rgba($primary-c, 0.1);
+$background-c: #ecf3f8;
+$dark-c: #181c29;
+$white-c: #fff;
+$white-40-c: rgba($white-c, 0.4);
+$white-20-c: rgba($white-c, 0.2);
+$tags-colors: (
+  'for work': #4361ff,
+  'for harmony': #ff43f7,
+  'for health': #06a44f,
+);
+$overlay-c: rgb(24 28 41 / 80%);
+
+// Border radius
+$border-radius-l: 20px;
+$border-radius-s: 12px;
+
+// Breakpoints
+$breakpoints: (
+  'desktop': 1440px,
+  'laptop': 1060px,
+  'tablet': 768px,
+  'tablet-s': 625px,
+  'mobile': 380px,
+);
+$max-width: (
+  'desktop': 1276px,
+  'laptop': 1074px,
+  'tablet': 752px,
+  'mobile': 362px,
+);
+
+// Transition
+$transition: all 0.4s;

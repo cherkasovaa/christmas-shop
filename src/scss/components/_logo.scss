@@ -1,0 +1,28 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.logo {
+  position: relative;
+  z-index: 3;
+
+  & &__link {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    padding: 8px 20px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    --size: 24px;
+
+    width: var(--size);
+    height: var(--size);
+  }
+
+  &__description {
+    @include mixins.action-small;
+
+    color: variables.$dark-c;
+  }
+}

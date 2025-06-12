@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: map.get(variables.$max-width, 'desktop');
+  padding: 12px 0;
+  margin: 0 auto;
+}
+
+@include mixins.respond-to('tablet') {
+  .header {
+    padding: 12px 8px;
+  }
+}

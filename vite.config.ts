@@ -10,6 +10,9 @@ export default defineConfig(() => {
       emptyOutDir: true,
       assetsDir: 'assets',
       rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name][extname]',
+        },
         input: {
           main: resolve(__dirname, 'src/index.html'),
           gifts: resolve(__dirname, 'src/gifts.html'),

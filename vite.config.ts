@@ -2,9 +2,13 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
+const BASE_URL_DEV = '/';
+const BASE_URL_PROD = '/christmas-shop/';
+
 export default defineConfig(() => {
   return {
     root: 'src',
+    base: process.env.NODE_ENV === 'production' ? BASE_URL_PROD : BASE_URL_DEV,
     build: {
       outDir: '../build',
       emptyOutDir: true,

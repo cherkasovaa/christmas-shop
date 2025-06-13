@@ -1,0 +1,18 @@
+@use '../helpers/mixins';
+
+.title {
+  max-width: min(437px, 100%);
+  text-align: center;
+
+  &_main {
+    @include mixins.header-main;
+  }
+
+  &_secondary {
+    @include mixins.header-secondary;
+  }
+
+  &_left {
+    text-align: left;
+  }
+}

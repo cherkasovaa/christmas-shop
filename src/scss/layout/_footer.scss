@@ -1,0 +1,49 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.footer {
+  padding: 60px 0;
+  background: variables.$white-c;
+
+  & &__container {
+    background: inherit;
+  }
+
+  &__row {
+    display: flex;
+    gap: 12px;
+
+    &:first-child {
+      margin-bottom: 54px;
+    }
+
+    &_horizontal {
+      flex-wrap: wrap;
+    }
+
+    &_vertical {
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+    }
+
+    & > .copyright {
+      margin-bottom: 5px;
+    }
+
+    & > .creators .link {
+      font-family: variables.$secondary-font;
+      font-size: 22px;
+      line-height: 100%;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+@include mixins.respond-to('laptop') {
+  .footer {
+    & &__container {
+      padding: 0 8px;
+    }
+  }
+}

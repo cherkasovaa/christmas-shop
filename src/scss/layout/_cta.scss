@@ -1,0 +1,41 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.cta {
+  overflow: hidden;
+  color: variables.$white-c;
+  background:
+    no-repeat center center / cover url('../assets/images/bg-snow.png'),
+    no-repeat center bottom / cover url('../assets/images/bg-forest.png');
+  border-radius: 0 0 variables.$border-radius-l variables.$border-radius-l;
+
+  &.section {
+    padding: 180px 0 !important;
+  }
+
+  & &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    align-items: center;
+  }
+
+  &__announcement {
+    @include mixins.caption;
+
+    margin-bottom: 8px;
+    font-family: variables.$secondary-font;
+    font-size: variables.$font-size-l;
+    text-align: center;
+  }
+}
+
+@include mixins.respond-to('mobile') {
+  .cta {
+    & &__container {
+      gap: 21px;
+      max-width: 367px;
+    }
+  }
+}

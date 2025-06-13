@@ -1,0 +1,40 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.timer {
+  display: inline-flex;
+  padding: 8px 12px 12px;
+  background: variables.$white-40-c;
+  border-radius: variables.$border-radius-l;
+
+  &__section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+
+    &:not(:last-child)::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 1px;
+      height: 20px;
+      content: '';
+      background: variables.$white-40-c;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__counter {
+    @include mixins.heading($letter-spacing: 4px);
+
+    font-size: variables.$font-size-l;
+  }
+
+  &__description {
+    @include mixins.heading($line-height: 130%, $letter-spacing: 0);
+
+    font-size: variables.$font-size-s;
+  }
+}

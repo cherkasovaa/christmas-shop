@@ -1,0 +1,29 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.tab {
+  @include mixins.action-small(1px);
+
+  padding: 12px 20px;
+  color: variables.$white-c;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: variables.$border-radius-s;
+  transition: variables.$transition;
+
+  &:hover,
+  &.active {
+    background-color: variables.$white-20-c;
+  }
+
+  &.active {
+    cursor: default;
+  }
+}
+
+@include mixins.respond-to('mobile') {
+  .tab {
+    padding: 12px 8px;
+  }
+}

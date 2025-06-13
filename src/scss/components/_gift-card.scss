@@ -1,0 +1,50 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.gift-card {
+  width: 310px;
+  overflow: hidden;
+  color: variables.$dark-c;
+  cursor: pointer;
+  background: variables.$background-c;
+  border-radius: variables.$border-radius-l;
+
+  &__image-container {
+    max-height: 230px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  &__info {
+    height: 112px;
+    padding: 20px;
+    background-color: variables.$white-c;
+    border-radius: variables.$border-radius-l;
+  }
+
+  &__purpose {
+    @include mixins.header-quaternary;
+
+    margin-bottom: 7px;
+
+    @each $name, $color in variables.$tags-colors {
+      &[data-type='#{$name}'] {
+        color: $color;
+      }
+    }
+  }
+
+  &__title {
+    @include mixins.header-tertiary;
+
+    transition: variables.$transition;
+  }
+
+  &:hover &__title {
+    color: variables.$primary-c;
+  }
+}

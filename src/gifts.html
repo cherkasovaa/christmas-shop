@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gifts Page | Christmas Shop</title>
+
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="./index.html" class="logo__link link">
+        <img src="./assets/icons/snowflake.png" alt="The Gifts Logo" class="logo__icon" />
+        <span class="logo__description">The gifts</span>
+      </a>
+    </div>
+
+    <div class="burger-menu">
+      <span class="burger-menu__item"></span>
+      <span class="burger-menu__item"></span>
+    </div>
+
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item active">
+          <a class="navigation__link link" href="#">Gifts</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link link" href="./index.html#about">About</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link link" href="./index.html#best">Best</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link link" href="#footer">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="gift-page" class="main">
+    <section class="hero hero_gift section">
+      <div class="hero__container container">
+        <h1 class="title title_main">
+          Achieve health, harmony, and inner strength
+        </h1>
+
+        <div class="tabs">
+          <button id="all" class="tab" data-type="all">All</button>
+          <button id="for-work" class="tab" data-type="for work">
+            For work
+          </button>
+          <button id="for-health" class="tab" data-type="for health">
+            For health
+          </button>
+          <button id="for-harmony" class="tab" data-type="for harmony">
+            For harmony
+          </button>
+        </div>
+
+        <div class="gifts"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer__container container">
+      <div class="footer__row footer__row_horizontal">
+        <div class="contacts-card">
+          <a class="contacts-card__link" href="tel:+375291112233">
+            <img src="./assets/images/svg/santa-claus.svg" alt="santa clause" class="contacts-card__image" />
+            <div class="contacts-card__item">+375 (29) 111-22-33</div>
+            <p class="contacts-card__call-to-action">Call Us</p>
+          </a>
+        </div>
+        <div class="contacts-card">
+          <a class="contacts-card__link" href="https://maps.app.goo.gl/xGPXG4gmdBPEJVmB7" target="_blank">
+            <img src="./assets/images/svg/christmas-tree.svg" alt="christmas tree" class="contacts-card__image" />
+            <div class="contacts-card__item">Magic forest</div>
+            <p class="contacts-card__call-to-action">Meet us</p>
+          </a>
+        </div>
+        <div class="contacts-card">
+          <a class="contacts-card__link" href="mailto:gifts@magic.com">
+            <img src="./assets/images/svg/snake.svg" alt="snake" class="contacts-card__image" />
+            <div class="contacts-card__item">gifts@magic.com</div>
+            <p class="contacts-card__call-to-action">Write us</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__row footer__row_vertical">
+        <div class="social-media">
+          <a class="social-media__link" href="https://web.telegram.org/">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/telegram.svg#telegram"></use>
+            </svg>
+          </a>
+          <a class="social-media__link" href="http://facebook.com">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/facebook.svg#facebook"></use>
+            </svg>
+          </a>
+          <a class="social-media__link" href="https://instagram.com/  ">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/instagram.svg#instagram"></use>
+            </svg>
+          </a>
+          <a class="social-media__link" href="http://x.com">
+            <svg class="icon">
+              <use xlink:href="./assets/icons/x-social.svg#xnetwork"></use>
+            </svg>
+          </a>
+        </div>
+        <p class="copyright">© Copyright 2025, All Rights Reserved</p>
+
+        <p class="creators">
+          <a class="link" href="https://rs.school/" target="_blank">Made in Rolling Scopes School</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

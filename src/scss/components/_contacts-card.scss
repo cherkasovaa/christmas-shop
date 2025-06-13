@@ -1,0 +1,59 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.contacts-card {
+  flex: 1 1 calc(100% / 3 - 8px);
+  cursor: pointer;
+  background: variables.$background-c;
+  border-radius: variables.$border-radius-l;
+  transition: variables.$transition;
+
+  &__item,
+  &__call-to-action {
+    transition: variables.$transition;
+  }
+
+  &__item {
+    @include mixins.heading;
+
+    font-size: variables.$font-size-l;
+
+    & > * {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &:hover &__item,
+  &:hover &__call-to-action {
+    color: variables.$primary-c;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 20px;
+    color: inherit;
+    text-decoration: none;
+    transition: variables.$transition;
+  }
+
+  &__image {
+    --size: 80px;
+
+    width: var(--size);
+    height: var(--size);
+  }
+
+  &__call-to-action {
+    @include mixins.heading($letter-spacing: 2px);
+  }
+}
+
+@include mixins.respond-to('tablet') {
+  .contacts-card {
+    flex-basis: 100%;
+  }
+}

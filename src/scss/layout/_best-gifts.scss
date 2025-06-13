@@ -1,0 +1,55 @@
+@use '../helpers/mixins';
+@use '../helpers/variables';
+
+.best-gifts {
+  position: relative;
+  color: variables.$white-c;
+  background: url('../assets/images/bg-snow.png') no-repeat center center /
+    cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+
+  &__gifts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+}
+
+@include mixins.respond-to('tablet') {
+  .best-gifts {
+    & &__container {
+      padding: 0 60px;
+    }
+
+    &__gifts-container {
+      justify-content: center;
+    }
+  }
+}
+
+@include mixins.respond-to('mobile') {
+  .best-gifts {
+    & &__container {
+      padding: 0;
+    }
+
+    &__title-wrapper {
+      gap: 11px;
+    }
+  }
+}
